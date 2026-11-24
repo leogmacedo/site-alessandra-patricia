@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Alessandra Patrícia · Massoterapeuta</title>
+<link rel="stylesheet" type="text/css" href="./style.css">
+<meta name="description" content="Massoterapia para aliviar tensões e devolver o bem-estar. Atendimento no studio e em domicílio. Agende pelo WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Mrs+Saint+Delafield&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<header>
+ <div class="wrap">
+  <a class="brand" href="#inicio">Alessandra Patrícia<small>MASSOTERAPEUTA</small></a>
+  <nav aria-label="Principal">
+   <a href="#inicio">início</a>
+   <a href="#quem-somos">quem sou eu</a>
+   <a href="#beneficios">benefícios</a>
+   <a href="#atendimento">atendimento</a>
+  </nav>
+ </div>
+</header>
+
+<main>
+<!-- CARROSSEL: as fotos são definidas em SLIDES, no script no final do arquivo -->
+<section class="hero" id="inicio" aria-roledescription="carrossel" aria-label="Fotos">
+ <div id="slides"></div>
+ <div class="hero-txt">
+  <h1>Seu momento de equilíbrio e cuidado</h1>
+  <p>Massoterapia para aliviar tensões, renovar a energia e devolver o bem-estar ao corpo e à mente.</p>
+  <a class="btn lime" data-wa>Agendar pelo WhatsApp</a>
+ </div>
+ <button class="arrow" id="prev" aria-label="Foto anterior">‹</button>
+ <button class="arrow" id="next" aria-label="Próxima foto">›</button>
+ <div id="dots"></div>
+</section>
+
+<section class="about" id="quem-somos">
+ <div class="wrap">
+  <img src="assets\images\logo.png" alt="Logo de Alessandra Patrícia, massoterapeuta: flor de lótus sobre uma mão aberta">
+  <div>
+   <h2>Cuidado feito sob medida para você</h2>
+   <p>Cada sessão é pensada de forma individual: a técnica, a pressão e o ritmo se ajustam ao que o seu corpo precisa naquele dia.</p>
+   <p>Aqui, massagem é tempo de pausa, escuta e atenção, em um ambiente tranquilo e acolhedor.</p>
+   <div class="sign">Alessandra</div>
+  </div>
+ </div>
+</section>
+
+<section class="benefits" id="beneficios">
+ <div class="wrap">
+  <div class="intro">
+   <h2>Por que a massagem faz bem</h2>
+   <p>Mais do que relaxar, o toque terapêutico atua em vários aspectos da saúde. Veja o que a massagem regular pode trazer.</p>
+   <small>A massoterapia é uma prática complementar e não substitui o acompanhamento médico.</small>
+  </div>
+  <ul>
+   <li><h3>Menos estresse e ansiedade</h3><p>O toque lento e ritmado ativa o relaxamento e pode reduzir os níveis de cortisol, o hormônio do estresse.</p></li>
+   <li><h3>Alívio de dores e tensões</h3><p>Ajuda a soltar nós e contraturas musculares, comuns em quem passa horas sentado ou carrega o peso da rotina.</p></li>
+   <li><h3>Circulação mais ativa</h3><p>As manobras estimulam o fluxo sanguíneo e linfático, favorecendo a oxigenação dos tecidos e a sensação de pernas leves.</p></li>
+   <li><h3>Sono mais profundo</h3><p>Um corpo relaxado dorme melhor. Muitas pessoas notam mais facilidade para adormecer depois das sessões.</p></li>
+   <li><h3>Mais disposição e foco</h3><p>Com menos tensão acumulada, sobra energia para o trabalho, os estudos e os momentos com quem você ama.</p></li>
+   <li><h3>Bem-estar emocional</h3><p>A massagem pode favorecer a liberação de endorfina e serotonina, ligadas ao prazer e ao bom humor.</p></li>
+  </ul>
+ </div>
+</section>
+
+<section class="service" id="atendimento">
+ <div class="split">
+  <div class="panel home">
+   <h2>Atendimento em domicílio</h2>
+   <p>Prefere relaxar sem sair de casa? A massagem vai até você, no conforto do seu ambiente, com toda a tranquilidade que o momento pede.</p>
+   <a class="btn lime" data-wa>Agendar em casa</a>
+  </div>
+  <div class="panel studio">
+   <h2>Atendimento no studio</h2>
+   <dl>
+    <div><dt>Endereço</dt><dd data-end></dd></div>
+   </dl>
+   <a class="link" id="mapa" target="_blank" rel="noopener">Ver no mapa</a>
+   <a class="btn" data-wa>Agendar no studio</a>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer>
+ <img src="assets\images\logo.png" alt="Alessandra Patrícia, massoterapeuta">
+ <h2>Reserve o seu horário</h2>
+ <a class="btn" data-wa>Chamar no WhatsApp</a>
+ <small>© 2026 Leonardo Macedo · Desenvolvedor</small>
+</footer>
+
+<a class="btn float" data-wa>Agendar</a>
+
+<script>
+/* ===== EDITE AQUI ===== */
+const CONFIG = {
+  whatsapp: "5500000000000", // código do país + DDD + número, só dígitos
+  mensagem: "Olá, Alessandra! Gostaria de agendar uma massagem.",
+  endereco: "Rua Exemplo, 123, Bairro, Cidade - UF",
+};
+// Coloque o caminho de cada foto em src (ex.: "fotos/massagem1.jpg").
+// Com src vazio, aparece um fundo verde de exemplo.
+const SLIDES = [
+  { src: "", alt: "Massagem relaxante nas costas" },
+  { src: "", alt: "Ambiente do studio" },
+  { src: "", alt: "Atendimento com pedras quentes" },
+  { src: "", alt: "Massagem em domicílio" }
+];
+/* ======================= */
+
+const $ = (s, e = document) => e.querySelector(s), $$ = (s, e = document) => [...e.querySelectorAll(s)];
+
+// WhatsApp, endereço e horários
+const wa = "https://wa.me/" + CONFIG.whatsapp + "?text=" + encodeURIComponent(CONFIG.mensagem);
+$$("[data-wa]").forEach(a => { a.href = wa; a.target = "_blank"; a.rel = "noopener"; });
+$$("[data-end]").forEach(e => e.textContent = CONFIG.endereco);
+$$("[data-hor]").forEach(e => e.textContent = CONFIG.horarios);
+$("#mapa").href = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(CONFIG.endereco);
+
+// Carrossel
+const fundos = ["#283618,#618239", "#475E2A,#A2D95F", "#618239,#283618", "#84B04D,#475E2A"];
+const box = $("#slides"), dots = $("#dots"), hero = $("#inicio");
+SLIDES.forEach((s, i) => {
+  const d = document.createElement("div");
+  d.className = "slide";
+  d.setAttribute("role", "img");
+  d.setAttribute("aria-label", s.alt);
+  if (s.src) d.style.backgroundImage = 'url("' + s.src + '")';
+  else { d.style.background = "linear-gradient(135deg," + fundos[i % fundos.length] + ")"; d.classList.add("ph"); d.dataset.ph = "Foto " + (i + 1) + ": edite SLIDES no código"; }
+  box.append(d);
+  const b = document.createElement("button");
+  b.setAttribute("aria-label", "Ir para a foto " + (i + 1));
+  b.onclick = () => go(i, true);
+  dots.append(b);
+});
+const sl = $$(".slide"), dt = $$("#dots button");
+let cur = 0, timer;
+function go(i, manual) {
+  cur = (i + sl.length) % sl.length;
+  sl.forEach((s, k) => s.classList.toggle("on", k === cur));
+  dt.forEach((s, k) => s.classList.toggle("on", k === cur));
+  if (manual) play();
+}
+function play() {
+  clearInterval(timer);
+  if (!matchMedia("(prefers-reduced-motion:reduce)").matches) timer = setInterval(() => go(cur + 1), 6000);
+}
+$("#prev").onclick = () => go(cur - 1, true);
+$("#next").onclick = () => go(cur + 1, true);
+let x0 = 0;
+hero.addEventListener("touchstart", e => { x0 = e.touches[0].clientX; }, { passive: true });
+hero.addEventListener("touchend", e => { const dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 50) go(cur + (dx < 0 ? 1 : -1), true); });
+go(0); play();
+
+// Cabeçalho muda de cor ao rolar
+const hd = $("header"), solid = () => hd.classList.toggle("solid", scrollY > 40);
+solid(); addEventListener("scroll", solid, { passive: true });
+</script>
+</body>
+</html>
