@@ -49,7 +49,30 @@ nav a:not(.btn):hover{text-decoration:underline;text-underline-offset:6px}
 #dots button.on{background:var(--lime)}
 
 /* quem somos */
-.about .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:64px;align-items:center}
+.about .wrap {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    align-items: center;
+    gap: 50px;
+}
+
+.about .wrap > img.about-image {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid var(--about-border-color,rgba(40,54,24,.6));
+    box-sizing: border-box;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .about .wrap {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+    }
+}
 .about img{width:100%;max-width:460px;mix-blend-mode:multiply;justify-self:center}
 .about h2{margin-bottom:22px}
 .about p+p{margin-top:16px}
@@ -81,7 +104,7 @@ nav a:not(.btn):hover{text-decoration:underline;text-underline-offset:6px}
 
 /* rodapé */
 footer{background:var(--tint);text-align:center;padding:72px 24px 40px}
-footer img{width:min(280px,70%);mix-blend-mode:multiply;transform:translateX(-15px);}
+footer img{width:min(280px,70%);mix-blend-mode:multiply;transform:translateX(-18px);}
 footer h2{font-size:clamp(1.8rem,4vw,2.6rem);margin:6px 0 26px}
 footer small{display:block;margin-top:48px;color:var(--muted);font-size:.8rem}
 .float{position:fixed;right:18px;bottom:18px;z-index:25;box-shadow:0 8px 24px rgba(40,54,24,.3)}
@@ -97,3 +120,76 @@ footer small{display:block;margin-top:48px;color:var(--muted);font-size:.8rem}
  .arrow{display:none}
 }
 @media(prefers-reduced-motion:reduce){.slide{transition:opacity .01s;transform:none}html{scroll-behavior:auto}}
+
+
+
+/* AJUSTES EXCLUSIVOS PARA MOBILE */
+@media (max-width: 600px) {
+
+    /* Cabeçalho: Alessandra Patrícia */
+    header .wrap {
+        justify-content: center;
+    }
+
+    .brand {
+        align-items: center;
+        text-align: center;
+    }
+
+    .brand small {
+        transform: translateX(0);
+        width: 100%;
+        text-align: center;
+        letter-spacing: .32em;
+    }
+
+    /* Imagem da seção Quem sou eu */
+    .about .wrap > img.about-image {
+        margin: 0 auto;
+    }
+
+    /* Benefícios */
+    .benefits .intro {
+        text-align: center;
+    }
+
+    .benefits ul {
+        padding-left: 0;
+    }
+
+    /* Atendimento */
+    .panel {
+        align-items: center;
+        text-align: center;
+    }
+
+    .panel p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Logo do rodapé */
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    footer img {
+        display: block;
+        width: min(280px, 70%);
+        height: auto;
+        margin: 0 auto;
+        transform: translateX(0);
+        mix-blend-mode: multiply;
+    }
+
+    footer h2 {
+        text-align: center;
+    }
+
+    footer small {
+        text-align: center;
+    }
+}

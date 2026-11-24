@@ -41,7 +41,7 @@
 
 <section class="about" id="quem-somos">
  <div class="wrap">
-  <img src="assets\images\logo.png" alt="Logo de Alessandra Patrícia, massoterapeuta: flor de lótus sobre uma mão aberta">
+  <img class="about-image" src="assets/images/alessandra.jpeg" alt="Alessandra Patrícia, massoterapeuta">
   <div>
    <h2>Cuidado feito sob medida para você</h2>
    <p>Cada sessão é pensada de forma individual: a técnica, a pressão e o ritmo se ajustam ao que o seu corpo precisa naquele dia.</p>
@@ -107,10 +107,10 @@ const CONFIG = {
 // Coloque o caminho de cada foto em src (ex.: "fotos/massagem1.jpg").
 // Com src vazio, aparece um fundo verde de exemplo.
 const SLIDES = [
-  { src: "", alt: "Massagem relaxante nas costas" },
-  { src: "", alt: "Ambiente do studio" },
-  { src: "", alt: "Atendimento com pedras quentes" },
-  { src: "", alt: "Massagem em domicílio" }
+  { src: "assets/images/carrossel01.jpg", alt: "DESCREVER IMAGEM" },
+  { src: "assets/images/carrossel02.jpg", alt: "DESCREVER IMAGEM" },
+  { src: "assets/images/carrossel03.jpg", alt: "DESCREVER IMAGEM" },
+  { src: "assets/images/carrossel04.jpg", alt: "DESCREVER IMAGEM" }
 ];
 /* ======================= */
 
@@ -126,6 +126,7 @@ $("#mapa").href = "https://www.google.com/maps/search/?api=1&query=" + encodeURI
 // Carrossel
 const fundos = ["#283618,#618239", "#475E2A,#A2D95F", "#618239,#283618", "#84B04D,#475E2A"];
 const box = $("#slides"), dots = $("#dots"), hero = $("#inicio");
+
 SLIDES.forEach((s, i) => {
   const d = document.createElement("div");
   d.className = "slide";
